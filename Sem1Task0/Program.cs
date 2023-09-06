@@ -4,7 +4,7 @@
 
 Console.WriteLine("Введите число");
 // Считываем данные с консоли
-string? inputNum = Console.ReadLine(); //?? "0";
+string inputNum = Console.ReadLine()?? "0";
 // Проверяем, чтобы данные не были пустыми
 if (inputNum != null)
 {
