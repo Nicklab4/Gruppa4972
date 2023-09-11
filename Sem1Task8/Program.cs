@@ -17,7 +17,7 @@ System.Console.Write(num + " -> ");
 for (int i = 2; i <= num; i += 2)
 {
     System.Console.Write(i);
-    if (i == num | i == (num - 1))
+    if (i == num || i == (num - 1))
         break;
 
     System.Console.Write(", ");
