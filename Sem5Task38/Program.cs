@@ -80,19 +80,19 @@ double[] GenArrayD(int num, int lowBorder, int highBorder)
 // метод сотртировки int массива вставкой
 void InsertSort(int[] arr)
 {
-    int key, j;
+    int temp, j;                            // Объявляем вспомогательные переменные
 
-    for (int i = 1; i < arr.Length; i++)
+    for (int i = 1; i < arr.Length; i++)    // Проходим по массиву
     {
-        key = arr[i];
-        j = i - 1;
+        temp = arr[i];                      // В переменную temp помещаем значение
+        j = i - 1;                          // устанавливаем счётчик второго цикла
 
-        while (j >= 0 && arr[j] > key)
-        {
-            arr[j + 1] = arr[j];
-            j--;
+        while (j >= 0 && arr[j] > temp)     // Пока предыдущая пременная больше значения temp
+        {                                   //   
+            arr[j + 1] = arr[j];            // Производим смещение вправо значений предыдущих ячеек
+            j--;                            //
         }
-        arr[j + 1] = key;
+        arr[j + 1] = temp;                  // Вставляем значение temp на освободившуюся позицию
     }
 }
 
