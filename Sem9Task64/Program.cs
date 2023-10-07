@@ -38,7 +38,7 @@ string GenLineNum(int num)
     if (num > 1)
         return num + ", " + GenLineNum(num - 1);
 
-    return num.ToString();
+    return "1";
 }
 
 
