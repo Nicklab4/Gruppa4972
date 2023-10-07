@@ -22,17 +22,24 @@ int ReadData(string msg)
     return num;
 }
 
+// Метод вывода результата
+void PrintRezult(string msg)
+{
+    System.Console.WriteLine(msg);
+}
 
 //////////////////////////////////////////////////////////////
 /// Методы текущего задания 
 //////////////////////////////////////////////////////////////
 
 // Рекурсивный метод вывода чисел от 1 до N
-void GenLineNum(int num)
+string GenLineNum(int num)
 {
-    System.Console.Write(num + " ");
-    if (num > 1)
-        GenLineNum(num - 1);
+    string str = "";
+    if (num >= 1)
+    str = num + ", " + GenLineNum(num - 1);
+        
+    return str;
 }
 
 
@@ -42,4 +49,4 @@ void GenLineNum(int num)
 
 int num = ReadData("Введите число");
 
-GenLineNum(num);
+PrintRezult("N = " + num + " -> " + GenLineNum(num));
