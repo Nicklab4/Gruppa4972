@@ -35,11 +35,10 @@ void PrintRezult(string msg)
 // Рекурсивный метод вывода чисел от 1 до N
 string GenLineNum(int num)
 {
-    string str = "";
-    if (num >= 1)
-    str = num + ", " + GenLineNum(num - 1);
-        
-    return str;
+    if (num > 1)
+        return num + ", " + GenLineNum(num - 1);
+
+    return num.ToString();
 }
 
 
